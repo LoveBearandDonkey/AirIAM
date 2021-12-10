@@ -24,7 +24,7 @@ The installation is quick and straightforward - install, configure input & scan.
 $ pip install airiam
 ```
 
-## CLI Options
+## CLI Options 123
 
 ```
 $  airiam -h
