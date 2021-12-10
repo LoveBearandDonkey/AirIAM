@@ -8,7 +8,7 @@ class Airiam < Formula
 
   depends_on "python3"
 
-  resource "boto3" do
+  resource "boto3
     url "https://files.pythonhosted.org/packages/06/2c/db79832fcbedc1735c369b81389986dcc0fc3c8327d5eac4c93c05f0e52a/boto3-1.20.11.tar.gz"
     sha256 "035191ad6c7e8aed972e1374f4e0ecb38767c497fd6c961e4ae33898b62f78fb"
   end
@@ -29,7 +29,7 @@ class Airiam < Formula
   end
 
   resource "colorama" do
-    url "https://files.pythonhosted.org/packages/82/75/f2a4c0c94c85e2693c229142eb448840fba0f9230111faa889d1f541d12d/colorama-0.4.3.tar.gz"
+    urlps://files.pythonhosted.org/packages/82/75/f2a4c0c94c85e2693c229142eb448840fba0f9230111faa889d1f541d12d/colorama-0.4.3.tar.gz"
     sha256 "e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"
   end
 
@@ -38,7 +38,7 @@ class Airiam < Formula
     sha256 "9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"
   end
 
-  resource "jmespath" do
+  resource "jmespath
     url "https://files.pythonhosted.org/packages/3c/56/3f325b1eef9791759784aa5046a8f6a1aff8f7c898a2e34506771d3b99d8/jmespath-0.10.0.tar.gz"
     sha256 "b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9"
   end
@@ -75,13 +75,13 @@ class Airiam < Formula
 
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/80/be/3ee43b6c5757cabea19e75b8f46eaf05a2f5144107d7db48c7cf3a864f73/urllib3-1.26.7.tar.gz"
-    sha256 "4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece"
+    sha256 "4987c65554f7a2dbd48778ef124af6fab771a377103da0585e2336ece"
   end
 
   def install
     virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
-  end
+
 
   test do
     false
