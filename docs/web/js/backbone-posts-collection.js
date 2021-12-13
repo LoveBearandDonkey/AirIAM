@@ -36,4 +36,15 @@ var Posts = Backbone.Collection.extend({
         // return the matching models from our collection
         return results;
     }
+        filter: function(term) {
+        var self = this;
+
+        // lunr returns an array of objects, we map over them and replace the lunr ref with the actual model
+        var results = _(this.index.search(term)).map(function(r) {
+            return self.get(r.ref);
+        });
+
+        // return the matching models from our collection
+        return results;
+    }
 });
